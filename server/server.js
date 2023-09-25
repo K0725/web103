@@ -1,6 +1,6 @@
 import express from 'express'
 
-import courseRouter from './routes/courses.js'
+import coursesRouter from './routes/courses.js'
 
 
 const app = express()
@@ -9,9 +9,8 @@ app.use('/public', express.static('./public'))
 app.use('/scripts', express.static('./public/scripts'))
 
 
-app.use('/courses', courseRouter)
+app.use('/courses', coursesRouter)
 
-//root page
 app.get('/', (req, res) => {
   res.status(200).send('<h1 style="text-align: center; margin-top: 50px;">Courses API</h1>')
 })
