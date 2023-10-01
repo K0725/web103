@@ -1,8 +1,6 @@
-const renderFruits = async () => {
+const courseRender = async () => {
     const response = await fetch('/courses')
     const data = await response.json()
-
-    console.log(data)
   
     const mainContent = document.getElementById('main-content')
 
@@ -49,9 +47,10 @@ const renderFruits = async () => {
   
   const requestedUrl = window.location.href.split('/').pop()
  
+  // if 
   if (requestedUrl) {
     window.location.href = '../404.html'
   }
   else {
-    renderFruits()[[[]]]
+    courseRender()[[[]]]
   }
